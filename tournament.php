@@ -52,7 +52,7 @@ class Tournament
         return $this;
     }
 
-    private function arrayToPairs($arr) //превражение массива с игроками в двумерный массив с парами игроков
+    private function arrayToPairs($arr) //превращение массива с игроками в двумерный массив с парами игроков
     {
         $compared_array = [];
         $count = count($arr);
@@ -108,7 +108,6 @@ class Tournament
         $count = count($this->players);
         for ($i = 1; $i < $count; $i++)
         {
-
             $this->printDay($this->arrayToPairs($this->players), 
                             $this->date->add(new DateInterval(("P".$i."D")))->format("d.m.Y"));
             $this->players = $this->scroll($this->players);
