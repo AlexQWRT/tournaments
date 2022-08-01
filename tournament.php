@@ -11,14 +11,14 @@ class Tournament
     public function __construct(string $name, string $date = "")
     {
         $this->name = $name;
-        if ($date == "") //если дата начала не передана
+        if ($date == "") //РµСЃР»Рё РґР°С‚Р° РЅР°С‡Р°Р»Р° РЅРµ РїРµСЂРµРґР°РЅР°
         {
-            $this->date = new DateTimeImmutable("now"); //устанавливается сегодняшняя дата
+            $this->date = new DateTimeImmutable("now"); //СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ СЃРµРіРѕРґРЅСЏС€РЅСЏСЏ РґР°С‚Р°
         }
         else
         {
-            $date[4] = '-'; //форматирование передаваемой даты
-            $date[7] = '-'; //форматирование передаваемой даты
+            $date[4] = '-'; //С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РїРµСЂРµРґР°РІР°РµРјРѕР№ РґР°С‚С‹
+            $date[7] = '-'; //С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРёРµ РїРµСЂРµРґР°РІР°РµРјРѕР№ РґР°С‚С‹
             $this->date = new DateTimeImmutable($date);
         }
         $this->players = [];
@@ -52,7 +52,7 @@ class Tournament
         return $this;
     }
 
-    private function arrayToPairs($arr) //превражение массива с игроками в двумерный массив с парами игроков
+    private function arrayToPairs($arr) //РїСЂРµРІСЂР°Р¶РµРЅРёРµ РјР°СЃСЃРёРІР° СЃ РёРіСЂРѕРєР°РјРё РІ РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ СЃ РїР°СЂР°РјРё РёРіСЂРѕРєРѕРІ
     {
         $compared_array = [];
         $count = count($arr);
@@ -63,7 +63,7 @@ class Tournament
         return $compared_array;
     }
 
-    private function scroll($arr) //смещение всех игроков кроме первого в массиве по часовой стрелке 
+    private function scroll($arr) //СЃРјРµС‰РµРЅРёРµ РІСЃРµС… РёРіСЂРѕРєРѕРІ РєСЂРѕРјРµ РїРµСЂРІРѕРіРѕ РІ РјР°СЃСЃРёРІРµ РїРѕ С‡Р°СЃРѕРІРѕР№ СЃС‚СЂРµР»РєРµ 
     {
         $buf = $arr[count($arr) - 1];
         for ($i = count($arr) - 1; $i > 1; $i--)
@@ -74,7 +74,7 @@ class Tournament
         return $arr;
     }
 
-    private function printDay($compared_array, $date) //вывод информации о туре турнира
+    private function printDay($compared_array, $date) //РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё Рѕ С‚СѓСЂРµ С‚СѓСЂРЅРёСЂР°
     {
         echo $this->name.", ".$date."<br>";
         foreach($compared_array as $pair)
@@ -91,12 +91,12 @@ class Tournament
     {
         if (count($this->players) == 0)
         {
-            echo "В турнир не добавлено ниодного игрока!";
+            echo "Р’ С‚СѓСЂРЅРёСЂ РЅРµ РґРѕР±Р°РІР»РµРЅРѕ РЅРёРѕРґРЅРѕРіРѕ РёРіСЂРѕРєР°!";
             return;
         }
         if (count($this->players) == 1)
         {
-            echo "В турнире слишком мало игроков!";
+            echo "Р’ С‚СѓСЂРЅРёСЂРµ СЃР»РёС€РєРѕРј РјР°Р»Рѕ РёРіСЂРѕРєРѕРІ!";
             return;
         }
         $remove_last = false;

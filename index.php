@@ -1,7 +1,7 @@
 <?php
 
-require_once "player.php"; //‚ÌÛÚË Â‡ÎËÁÓ‚‡Ú¸ class Player
-require_once "tournament.php"; //‚ÌÛÚË Â‡ÎËÁÓ‚‡Ú¸ ÍÎ‡ÒÒ Tournament
+require_once "player.php"; //–≤–Ω—É—Ç—Ä–∏ —Ä–µ–∞–ª–∏–∑–æ–≤–∞—Ç—å class Player
+require_once "tournament.php"; //–≤–Ω—É—Ç—Ä–∏ —Ä–µ–∞–ª–∏–∑–æ–≤–∞—Ç—å –∫–ª–∞—Å—Å Tournament
 
 $tournamentA = new Tournament("Tournament A", "2022.12.30");
 $tournamentA
@@ -11,15 +11,15 @@ $tournamentA
 	->addPlayer( (new Player("Player 4"))->setCity("Gomel") );
 $tournamentA->createPairs();
 /*
-ÓÊË‰‡ÂÏ˚È ÂÁÛÎ¸Ú‡Ú ‚˚ÔÓÎÌÂÌËˇ $tournamentA->createPairs();
-œËÏÂ˜‡ÌËÂ. ¬ÒÂ Ô‡˚ ÛÌËÍ‡Î¸Ì˚Â.
-Tournament ¿, 31.12.2022
+–æ–∂–∏–¥–∞–µ–º—ã–π —Ä–µ–∑—É–ª—å—Ç–∞—Ç –≤—ã–ø–æ–ª–Ω–µ–Ω–∏—è $tournamentA->createPairs();
+–ü—Ä–∏–º–µ—á–∞–Ω–∏–µ. –í—Å–µ –ø–∞—Ä—ã —É–Ω–∏–∫–∞–ª—å–Ω—ã–µ.
+Tournament –ê, 31.12.2022
 Player 1 (Minsk) - Player 4 (Gomel)
 Player 2 (Mogilev) - Player 3 (Vitebsk)
-Tournament ¿, 01.01.2023
+Tournament –ê, 01.01.2023
 Player 1 (Minsk) - Player 3 (Vitebsk)
 Player 4 (Gomel) - Player 2 (Mogilev)
-Tournament ¿, 02.01.2023
+Tournament –ê, 02.01.2023
 Player 1 (Minsk) - Player 2 (Mogilev)
 Player 3 (Vitebsk) - Player 4 (Gomel)
 */
@@ -36,8 +36,8 @@ $tournamentB
 $tournamentB->createPairs();
 
 /*
-ÓÊË‰‡ÂÏ˚È ÂÁÛÎ¸Ú‡Ú ‚˚ÔÓÎÌÂÌËˇ $tournamentB->createPairs();
-œËÏÂ˜‡ÌËÂ. ¬ÒÂ Ô‡˚ ÛÌËÍ‡Î¸Ì˚Â. ¬ Í‡Ê‰ÓÏ ÚÛÂ ÂÒÚ¸ Ó‰Ì‡ Ë„ÓÍ Â„Ó ÔÓÔÛÒÍ‡˛˘ËÈ. Õ‡ÔËÏÂ, ‚ ÔÂ‚ÓÏ ÚÛÂ ˝ÚÓ Player 1. ƒ‡Ú‡ ‚ ÔËÏÂ‡ı ÌËÊÂ ËÁ ‡Ò˜ÂÚÂ, ˜ÚÓ ÒÂ„Ó‰Ìˇ 04.05.2022
+–æ–∂–∏–¥–∞–µ–º—ã–π —Ä–µ–∑—É–ª—å—Ç–∞—Ç –≤—ã–ø–æ–ª–Ω–µ–Ω–∏—è $tournamentB->createPairs();
+–ü—Ä–∏–º–µ—á–∞–Ω–∏–µ. –í—Å–µ –ø–∞—Ä—ã —É–Ω–∏–∫–∞–ª—å–Ω—ã–µ. –í –∫–∞–∂–¥–æ–º —Ç—É—Ä–µ –µ—Å—Ç—å –æ–¥–Ω–∞ –∏–≥—Ä–æ–∫ –µ–≥–æ –ø—Ä–æ–ø—É—Å–∫–∞—é—â–∏–π. –ù–∞–ø—Ä–∏–º–µ—Ä, –≤ –ø–µ—Ä–≤–æ–º —Ç—É—Ä–µ —ç—Ç–æ Player 1. –î–∞—Ç–∞ –≤ –ø—Ä–∏–º–µ—Ä–∞—Ö –Ω–∏–∂–µ –∏–∑ —Ä–∞—Å—á–µ—Ç–µ, —á—Ç–æ —Å–µ–≥–æ–¥–Ω—è 04.05.2022
 Tournament B, 05.05.2022
 Player 2 - Player 7
 Player 3 - Player 6
